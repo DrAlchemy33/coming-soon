@@ -11,10 +11,15 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0; /* Remove default body margin */
+            overflow: hidden; /* Prevent scrolling */
         }
+
         img {
-            max-width: 100%;
-            height: auto;
+            max-width: 100%; /* Ensures the image never exceeds the container's width */
+            height: auto; /* Maintains aspect ratio */
+            max-height: 90vh; /* Limits the image height to 90% of the viewport height */
+            object-fit: contain; /* Ensures the entire image is visible without being cropped */
         }
     </style>
 </head>
@@ -22,3 +27,4 @@
     <img src="coming-soon.png" alt="Coming Soon">
 </body>
 </html>
+
